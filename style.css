@@ -1,0 +1,330 @@
+.html,
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.section-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.title h1 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+}
+
+nav a {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.duomo-catania-hero-image {
+    position: relative;
+
+}
+
+.duomo-catania-hero-image img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    position: absolute;
+    left: 60px;
+    bottom: 50px;
+    color: white;
+    text-align: left;
+    padding: 0;
+}
+
+.hero-title h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+.descrizione-sito {
+    color: white;
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.descrizione-sito-testo {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: medium;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.linea-divisoria {
+    left: 60px;
+    right: 60px;
+    margin-top: 60px;
+    border: 1.5px solid white;
+}
+
+
+.titolo-sezione-piazze {
+    color: white;
+    padding: 80px 60px 30px 60px;
+    text-align: left;
+}
+
+.titolo-sezione-piazze h3 {
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* ====== SEZIONE CARD + GRIGLIA ====== */
+.sezione-card {
+    margin: 30px 60px 90px 60px;
+}
+
+
+/* ================= GRIGLIA ================= */
+
+.grid-piazze {
+    display: grid;
+    grid-template-columns: repeat(3, 338px);
+    column-gap: 190px;
+    row-gap: 135px;
+    justify-content: center;
+}
+
+
+/* ================= CARD BASE (TUTTE UGUALI) ================= */
+
+.piazza-card a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    cursor: default;
+}
+
+.piazza-card img {
+    width: 338px;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================= BLOCCO BIANCO ================= */
+
+.label {
+    background-color: #ffffff;
+    padding: 18px 20px;
+    text-align: center;
+}
+
+
+.label span {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    display: inline-block;
+}
+
+
+/* ================= SOLO CARD INTERATTIVE ================= */
+
+.piazza-card.interactive a {
+    cursor: pointer;
+}
+
+.piazza-card.interactive a:before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 338px;
+    height: 240px;
+    display: none;
+}
+
+.piazza-card.interactive a:hover:before {
+    display: block;
+}
+
+.piazza-card.interactive a:hover .label span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-skip-ink: none;
+}
+
+
+/* ================= DISATTIVATO OVERLAY E LINK SULLE NON INTERATTIVE ================= */
+
+.piazza-card:not(.interactive) a {
+    pointer-events: none;
+}
+
+
+
+/* ====== FOOTER ====== */
+.footer {
+    margin: 80px 60px;
+    color: white;
+}
+
+.container-linea {
+    margin: 0 60px;
+}
+
+.footer-linea-divisoria {
+    width: 100%;
+    height: 1.5px;
+    background-color: white;
+    margin: 80px 0;
+}
+
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+
+.footer-copyright {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+/* ====== PAGINA DETTAGLIO PIAZZA ====== */
+.piazza-hero {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+}
+
+.piazza-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.piazza-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.piazza-hero-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.piazza-hero-title h2 {
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 33px;
+    margin: 0;
+}
+
+.piazza-content {
+    max-width: 620px;
+    margin: 120px auto 120px auto;
+    color: white;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.piazza-content p {
+    margin-bottom: 22px;
+}
+
+.piazza-gallery {
+    margin: 0 60px 140px 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 70px;
+}
+
+.gallery-card {
+    text-align: center;
+    color: white;
+}
+
+.gallery-card img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+.gallery-card p {
+    margin-top: 14px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+}
