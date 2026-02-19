@@ -487,6 +487,118 @@ nav a {
 }
 
 
+/* ========== PIAZZE (piazze.html) RESPONSIVE ========== */
+
+/* Griglia fluida base (evita rotture a risoluzioni intermedie) */
+.grid-piazze{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
+  gap: 80px 60px;
+  justify-items: center;
+}
+
+/* le card restano coerenti */
+.piazza-card{
+  width: 100%;
+  max-width: 338px;
+}
+
+.piazza-card img{
+  width: 338px;
+  height: 240px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width:767px){
+
+  /* NAVBAR */
+  .title h1,
+  nav a{ font-size:14px; }
+
+  nav ul{ gap:18px; }
+
+  /* contenitori e linee */
+  .container-linea{ margin: 0 16px; }
+  .titolo-sezione-piazze{ padding: 50px 16px 20px 16px; }
+  .sezione-card{ margin: 20px 16px 60px 16px; }
+
+  /* card singole */
+  .grid-piazze{
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    justify-items: center;
+  }
+
+  .piazza-card{
+    max-width: 280px;
+  }
+
+  .piazza-card img{
+    width: 280px;
+    height: 200px;
+  }
+
+  .label span{ font-size:12px; }
+
+  /* no overlay + no link effect */
+  .piazza-card.interactive a:before{
+    display:none !important;
+  }
+  .piazza-card.interactive a:hover .label span{
+    text-decoration:none;
+  }
+
+  /* footer */
+  .footer{ margin: 50px 16px; }
+  .footer-linea-divisoria{ margin: 50px 0; }
+  .footer-links, .footer-copyright{ font-size:11px; }
+}
+
+/* ================= TABLET ================= */
+@media (min-width:768px) and (max-width:1023px){
+
+  /* NAVBAR */
+  .title h1,
+  nav a{ font-size:16px; }
+
+  /* contenitori e linee */
+  .container-linea{ margin: 0 40px; }
+  .titolo-sezione-piazze{ padding: 64px 40px 24px 40px; }
+  .sezione-card{ margin: 24px 40px 72px 40px; }
+
+  /* griglia 2 colonne */
+  .grid-piazze{
+    grid-template-columns: repeat(2, 300px);
+    column-gap: 60px;
+    row-gap: 70px;
+    justify-content: center;
+  }
+
+  .piazza-card{
+    max-width: 300px;
+  }
+
+  .piazza-card img{
+    width: 300px;
+    height: 210px;
+  }
+
+  .label span{ font-size:14px; }
+
+  /* no overlay + no link effect */
+  .piazza-card.interactive a:before{
+    display:none !important;
+  }
+  .piazza-card.interactive a:hover .label span{
+    text-decoration:none;
+  }
+
+  /* footer */
+  .footer-links, .footer-copyright{ font-size:13px; }
+}
+
+
+
 
 
 
