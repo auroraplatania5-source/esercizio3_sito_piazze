@@ -107,10 +107,12 @@ nav a {
 
 .grid-piazze {
     display: grid;
-    grid-template-columns: repeat(3, 338px);
-    column-gap: 190px;
-    row-gap: 135px;
-    justify-content: center;
+
+    /* griglia fluida */
+    grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
+
+    gap: 80px 60px;
+    justify-items: center;
 }
 
 
@@ -328,3 +330,163 @@ nav a {
     font-weight: 500;
     font-size: 13px;
 }
+
+
+
+/* ========= LAYOUT RESPONSIVE ========= */
+
+/* ================= HOME MOBILE ================= */
+@media (max-width:767px) {
+
+    /* NAVBAR */
+    .title h1,
+    nav a {
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .duomo-catania-hero-image img {
+        height: 420px;
+        object-fit: cover;
+    }
+
+    .hero-title {
+        left: 20px;
+        bottom: 28px;
+    }
+
+    .hero-title h2 {
+        font-size: 35px;
+    }
+
+    /* DESCRIZIONE */
+    .descrizione-sito {
+        margin: 40px 20px;
+    }
+
+    .descrizione-sito-testo {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    /* TITOLO PIAZZE */
+    .titolo-sezione-piazze h3 {
+        font-size: 18px;
+    }
+
+    /* CARD UNA SOTTO L'ALTRA */
+    .grid-piazze {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        justify-items: center;
+    }
+
+    .piazza-card {
+        width: 280px;
+    }
+
+    .piazza-card img {
+        width: 280px;
+        height: 200px;
+    }
+
+    /* caption */
+    .label span {
+        font-size: 12px;
+    }
+
+    /* RIMUOVO overlay e link */
+    .piazza-card.interactive a:before {
+        display: none !important;
+    }
+
+    .piazza-card.interactive a:hover .label span {
+        text-decoration: none;
+    }
+
+    .piazza-card:not(.interactive) a {
+        pointer-events: auto;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 9px;
+    }
+}
+
+/* ================= HOME TABLET ================= */
+@media (min-width:768px) and (max-width:1023px) {
+
+    /* NAVBAR */
+    .title h1,
+    nav a {
+        font-size: 16px;
+    }
+
+    /* HERO */
+    .duomo-catania-hero-image img {
+        height: 520px;
+        object-fit: cover;
+    }
+
+    .hero-title h2 {
+        font-size: 45px;
+    }
+
+    /* DESCRIZIONE */
+    .descrizione-sito {
+        margin: 60px 40px;
+    }
+
+    .descrizione-sito-testo {
+        font-size: 14px;
+    }
+
+    /* TITOLO PIAZZE */
+    .titolo-sezione-piazze h3 {
+        font-size: 20px;
+    }
+
+    /* GRIGLIA 2x2 */
+    .grid-piazze {
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 60px;
+        row-gap: 70px;
+        justify-content: center;
+    }
+
+    .piazza-card img {
+        width: 300px;
+        height: 210px;
+    }
+
+    /* caption */
+    .label span {
+        font-size: 14px;
+    }
+
+    /* RIMUOVO overlay e link */
+    .piazza-card.interactive a:before {
+        display: none !important;
+    }
+
+    .piazza-card.interactive a:hover .label span {
+        text-decoration: none;
+    }
+
+    .piazza-card:not(.interactive) a {
+        pointer-events: auto;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
