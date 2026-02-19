@@ -335,155 +335,151 @@ nav a {
 
 /* ========= LAYOUT RESPONSIVE ========= */
 
+html { -webkit-text-size-adjust: 100%; }
+
+/* footer uguale su Samsung/iPhone: elimina margini default dei <p> e wrap pulito */
+.footer-links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.footer-links p{
+  margin: 0;          /* IMPORTANTISSIMO */
+  display: inline;    /* evita blocchi strani */
+}
+
+.footer-links span{
+  display: inline;
+}
+
+/* su mobile: togli i separatori | che rompono il wrap */
+@media (max-width: 767px){
+  .footer-links span{ display: none; }
+}
+
+
 /* ================= HOME MOBILE ================= */
 @media (max-width:767px) {
 
-    /* NAVBAR */
-    .title h1,
-    nav a {
-        font-size: 14px;
-    }
+  /* NAVBAR */
+  .title h1,
+  nav a { font-size: 14px; }
 
-    /* HERO */
-    .duomo-catania-hero-image img {
-        height: 420px;
-        object-fit: cover;
-    }
+  /* HERO */
+  .duomo-catania-hero-image img {
+    height: 420px;
+    object-fit: cover;
+  }
 
-    .hero-title {
-        left: 20px;
-        bottom: 28px;
-    }
+  .hero-title {
+    left: 20px;
+    bottom: 28px;
+  }
 
-    .hero-title h2 {
-        font-size: 35px;
-    }
+  .hero-title h2 { font-size: 35px; }
 
-    /* DESCRIZIONE */
-    .descrizione-sito {
-        margin: 40px 20px;
-    }
+  /* DESCRIZIONE
+     - margini un po' più stretti per evitare che "urbana," vada a capo
+     - manteniamo i <br> (non li tocchiamo) */
+  .descrizione-sito {
+    margin: 40px 12px;
+  }
 
-    .descrizione-sito-testo {
-        font-size: 12px;
-        line-height: 1.6;
-    }
+  .descrizione-sito-testo {
+    font-size: 12px;
+    line-height: 1.6;
+  }
 
-    /* TITOLO PIAZZE */
-    .titolo-sezione-piazze h3 {
-        font-size: 18px;
-    }
+  /* LINEE DIVISORIE (si adattano già, ma manteniamo margini coerenti) */
+  .linea-divisoria { margin-top: 32px; }
 
-    /* CARD UNA SOTTO L'ALTRA */
-    .grid-piazze {
-        grid-template-columns: 1fr;
-        row-gap: 40px;
-        justify-items: center;
-    }
+  /* TITOLO PIAZZE */
+  .titolo-sezione-piazze { padding: 46px 16px 18px 16px; }
+  .titolo-sezione-piazze h3 { font-size: 18px; }
 
-    .piazza-card {
-        width: 280px;
-    }
+  /* CARD UNA SOTTO L'ALTRA */
+  .sezione-card { margin: 20px 16px 60px 16px; }
 
-    .piazza-card img {
-        width: 280px;
-        height: 200px;
-    }
+  .grid-piazze {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    justify-items: center;
+  }
 
-    /* caption */
-    .label span {
-        font-size: 12px;
-    }
+  .piazza-card { width: 280px; }
 
-    /* RIMUOVO overlay e link */
-    .piazza-card.interactive a:before {
-        display: none !important;
-    }
+  .piazza-card img {
+    width: 280px;
+    height: 200px;
+  }
 
-    .piazza-card.interactive a:hover .label span {
-        text-decoration: none;
-    }
+  /* caption */
+  .label span { font-size: 12px; }
 
-    .piazza-card:not(.interactive) a {
-        pointer-events: auto;
-    }
+  /* RIMUOVO overlay e link effect */
+  .piazza-card.interactive a:before { display: none !important; }
+  .piazza-card.interactive a:hover .label span { text-decoration: none; }
 
-    /* FOOTER */
-    .footer-links,
-    .footer-copyright {
-        font-size: 9px;
-    }
+  .piazza-card:not(.interactive) a { pointer-events: auto; }
+
+  /* FOOTER */
+  .footer-links, .footer-copyright { font-size: 11px; }
 }
+
 
 /* ================= HOME TABLET ================= */
 @media (min-width:768px) and (max-width:1023px) {
 
-    /* NAVBAR */
-    .title h1,
-    nav a {
-        font-size: 16px;
-    }
+  /* NAVBAR */
+  .title h1,
+  nav a { font-size: 16px; }
 
-    /* HERO */
-    .duomo-catania-hero-image img {
-        height: 520px;
-        object-fit: cover;
-    }
+  /* HERO */
+  .duomo-catania-hero-image img {
+    height: 520px;
+    object-fit: cover;
+  }
 
-    .hero-title h2 {
-        font-size: 45px;
-    }
+  .hero-title h2 { font-size: 45px; }
 
-    /* DESCRIZIONE */
-    .descrizione-sito {
-        margin: 60px 40px;
-    }
+  /* DESCRIZIONE (mantieni i <br>) */
+  .descrizione-sito { margin: 60px 40px; }
 
-    .descrizione-sito-testo {
-        font-size: 14px;
-    }
+  .descrizione-sito-testo { font-size: 14px; }
 
-    /* TITOLO PIAZZE */
-    .titolo-sezione-piazze h3 {
-        font-size: 20px;
-    }
+  /* TITOLO PIAZZE */
+  .titolo-sezione-piazze h3 { font-size: 20px; }
 
-    /* GRIGLIA 2x2 */
-    .grid-piazze {
-        grid-template-columns: repeat(2, 300px);
-        column-gap: 60px;
-        row-gap: 70px;
-        justify-content: center;
-    }
+  /* GRIGLIA 2 COLONNE */
+  .grid-piazze {
+    grid-template-columns: repeat(2, 300px);
+    column-gap: 60px;
+    row-gap: 70px;
+    justify-content: center;
+  }
 
-    .piazza-card img {
-        width: 300px;
-        height: 210px;
-    }
+  .piazza-card { width: 300px; }
 
-    /* caption */
-    .label span {
-        font-size: 14px;
-    }
+  .piazza-card img {
+    width: 300px;
+    height: 210px;
+  }
 
-    /* RIMUOVO overlay e link */
-    .piazza-card.interactive a:before {
-        display: none !important;
-    }
+  /* caption */
+  .label span { font-size: 14px; }
 
-    .piazza-card.interactive a:hover .label span {
-        text-decoration: none;
-    }
+  /* RIMUOVO overlay e link effect */
+  .piazza-card.interactive a:before { display: none !important; }
+  .piazza-card.interactive a:hover .label span { text-decoration: none; }
+  .piazza-card:not(.interactive) a { pointer-events: auto; }
 
-    .piazza-card:not(.interactive) a {
-        pointer-events: auto;
-    }
-
-    /* FOOTER */
-    .footer-links,
-    .footer-copyright {
-        font-size: 13px;
-    }
+  /* FOOTER */
+  .footer-links, .footer-copyright { font-size: 13px; }
 }
 
 
@@ -497,7 +493,7 @@ nav a {
   justify-items: center;
 }
 
-/* le card restano coerenti */
+/* card coerenti base */
 .piazza-card{
   width: 100%;
   max-width: 338px;
@@ -508,7 +504,7 @@ nav a {
   height: 240px;
 }
 
-/* ================= MOBILE ================= */
+/* ================= PIAZZE MOBILE ================= */
 @media (max-width:767px){
 
   /* NAVBAR */
@@ -541,12 +537,8 @@ nav a {
   .label span{ font-size:12px; }
 
   /* no overlay + no link effect */
-  .piazza-card.interactive a:before{
-    display:none !important;
-  }
-  .piazza-card.interactive a:hover .label span{
-    text-decoration:none;
-  }
+  .piazza-card.interactive a:before{ display:none !important; }
+  .piazza-card.interactive a:hover .label span{ text-decoration:none; }
 
   /* footer */
   .footer{ margin: 50px 16px; }
@@ -554,7 +546,7 @@ nav a {
   .footer-links, .footer-copyright{ font-size:11px; }
 }
 
-/* ================= TABLET ================= */
+/* ================= PIAZZE TABLET ================= */
 @media (min-width:768px) and (max-width:1023px){
 
   /* NAVBAR */
@@ -574,9 +566,7 @@ nav a {
     justify-content: center;
   }
 
-  .piazza-card{
-    max-width: 300px;
-  }
+  .piazza-card{ max-width: 300px; }
 
   .piazza-card img{
     width: 300px;
@@ -586,19 +576,9 @@ nav a {
   .label span{ font-size:14px; }
 
   /* no overlay + no link effect */
-  .piazza-card.interactive a:before{
-    display:none !important;
-  }
-  .piazza-card.interactive a:hover .label span{
-    text-decoration:none;
-  }
+  .piazza-card.interactive a:before{ display:none !important; }
+  .piazza-card.interactive a:hover .label span{ text-decoration:none; }
 
   /* footer */
   .footer-links, .footer-copyright{ font-size:13px; }
 }
-
-
-
-
-
-
