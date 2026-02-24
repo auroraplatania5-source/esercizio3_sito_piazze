@@ -395,7 +395,7 @@ nav a {
         font-size: 12px;
     }
 
-    /* RIMUOVO overlay e link */
+    /* no overlay e link */
     .piazza-card.interactive a:before {
         display: none !important;
     }
@@ -489,125 +489,287 @@ nav a {
 
 /* ========== PIAZZE (piazze.html) RESPONSIVE ========== */
 
-/* Griglia fluida base (evita rotture a risoluzioni intermedie) */
-.grid-piazze{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
-  gap: 80px 60px;
-  justify-items: center;
+.grid-piazze {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(338px, 1fr));
+    gap: 80px 60px;
+    justify-items: center;
 }
 
-/* le card restano coerenti */
-.piazza-card{
-  width: 100%;
-  max-width: 338px;
+.piazza-card {
+    width: 100%;
+    max-width: 338px;
 }
 
-.piazza-card img{
-  width: 338px;
-  height: 240px;
+.piazza-card img {
+    width: 338px;
+    height: 240px;
 }
 
 /* ================= MOBILE ================= */
-@media (max-width:767px){
+@media (max-width:767px) {
 
-  /* NAVBAR */
-  .title h1,
-  nav a{ font-size:14px; }
+    /* NAVBAR */
+    .title h1,
+    nav a {
+        font-size: 14px;
+    }
 
-  nav ul{ gap:18px; }
+    nav ul {
+        gap: 18px;
+    }
 
-  /* contenitori e linee */
-  .container-linea{ margin: 0 16px; }
-  .titolo-sezione-piazze{ padding: 50px 16px 20px 16px; }
-  .sezione-card{ margin: 20px 16px 60px 16px; }
+    .container-linea {
+        margin: 0 16px;
+    }
 
-  .hero-title h2 {
-    font-size: 20px;
-  }
+    .titolo-sezione-piazze {
+        padding: 50px 16px 20px 16px;
+    }
 
-   .descrizione-sito-testo {
+    .sezione-card {
+        margin: 20px 16px 60px 16px;
+    }
+
+    .hero-title h2 {
+        font-size: 20px;
+    }
+
+    .descrizione-sito-testo {
         font-size: 10px;
         line-height: 1.6;
-  }
+    }
 
-  /* card singole */
-  .grid-piazze{
-    grid-template-columns: 1fr;
-    row-gap: 40px;
-    justify-items: center;
-  }
+    /* card singole */
+    .grid-piazze {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        justify-items: center;
+    }
 
-  .piazza-card{
-    max-width: 280px;
-  }
+    .piazza-card {
+        max-width: 280px;
+    }
 
-  .piazza-card img{
-    width: 280px;
-    height: 200px;
-  }
+    .piazza-card img {
+        width: 280px;
+        height: 200px;
+    }
 
-  .label span{ font-size:12px; }
+    .label span {
+        font-size: 12px;
+    }
 
-  /* no overlay + no link effect */
-  .piazza-card.interactive a:before{
-    display:none !important;
-  }
-  .piazza-card.interactive a:hover .label span{
-    text-decoration:none;
-  }
+    /* no overlay, no link effect */
+    .piazza-card.interactive a:before {
+        display: none !important;
+    }
 
-  /* footer */
-  .footer{ margin: 50px 16px; }
-  .footer-linea-divisoria{ margin: 50px 0; }
-  .footer-links, .footer-copyright{ font-size:8px; }
+    .piazza-card.interactive a:hover .label span {
+        text-decoration: none;
+    }
+
+    /* footer */
+    .footer {
+        margin: 50px 16px;
+    }
+
+    .footer-linea-divisoria {
+        margin: 50px 0;
+    }
+
+    .footer-links,
+    .footer-copyright {
+        font-size: 8px;
+    }
 }
 
 /* ================= TABLET ================= */
-@media (min-width:768px) and (max-width:1023px){
+@media (min-width:768px) and (max-width:1023px) {
 
-  /* NAVBAR */
-  .title h1,
-  nav a{ font-size:16px; }
+    /* NAVBAR */
+    .title h1,
+    nav a {
+        font-size: 16px;
+    }
 
-  /* contenitori e linee */
-  .container-linea{ margin: 0 40px; }
-  .titolo-sezione-piazze{ padding: 64px 40px 24px 40px; }
-  .sezione-card{ margin: 24px 40px 72px 40px; }
+    .container-linea {
+        margin: 0 40px;
+    }
 
-  /* griglia 2 colonne */
-  .grid-piazze{
-    grid-template-columns: repeat(2, 300px);
-    column-gap: 60px;
-    row-gap: 70px;
-    justify-content: center;
-  }
+    .titolo-sezione-piazze {
+        padding: 64px 40px 24px 40px;
+    }
 
-  .piazza-card{
-    max-width: 300px;
-  }
+    .sezione-card {
+        margin: 24px 40px 72px 40px;
+    }
 
-  .piazza-card img{
-    width: 300px;
-    height: 210px;
-  }
+    /* griglia 2 colonne */
+    .grid-piazze {
+        grid-template-columns: repeat(2, 300px);
+        column-gap: 60px;
+        row-gap: 70px;
+        justify-content: center;
+    }
 
-  .label span{ font-size:14px; }
+    .piazza-card {
+        max-width: 300px;
+    }
 
-  /* no overlay + no link effect */
-  .piazza-card.interactive a:before{
-    display:none !important;
-  }
-  .piazza-card.interactive a:hover .label span{
-    text-decoration:none;
-  }
+    .piazza-card img {
+        width: 300px;
+        height: 210px;
+    }
 
-  /* footer */
-  .footer-links, .footer-copyright{ font-size:13px; }
+    .label span {
+        font-size: 14px;
+    }
+
+    /* no overlay, no link effect */
+    .piazza-card.interactive a:before {
+        display: none !important;
+    }
+
+    .piazza-card.interactive a:hover .label span {
+        text-decoration: none;
+    }
+
+    /* footer */
+    .footer-links,
+    .footer-copyright {
+        font-size: 13px;
+    }
 }
 
 
 
+/* ====== RESPONSIVE — PAGINE DETTAGLIO PIAZZE ====== */
 
+/* ====== MOBILE ====== */
+@media (max-width: 767px) {
 
+    /* NAVBAR */
+    .section-header nav ul li a {
+        font-size: 14px;
+    }
 
+    /* HERO */
+    .piazza-hero {
+        height: 280px;
+    }
+
+    .piazza-hero-title h2 {
+        font-size: 25px;
+    }
+
+    /* TESTO */
+    .piazza-content {
+        width: min(620px, calc(100% - 32px));
+        max-width: 620px;
+        margin: 40px auto;
+        font-size: 11px;
+        line-height: 1.75;
+    }
+
+    .piazza-gallery {
+        margin: 0 auto 70px auto;
+        padding: 0 16px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 26px;
+    }
+
+    .gallery-card {
+        max-width: 270px;
+        width: 100%;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .gallery-card p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* LINEA */
+    .container-linea {
+        padding: 0 16px;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 11px;
+    }
+}
+
+/* ====== TABLET ====== */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* NAVBAR */
+    .section-header nav ul li a {
+        font-size: 16px;
+    }
+
+    /* HERO */
+    .piazza-hero {
+        height: 420px;
+    }
+
+    .piazza-hero-title h2 {
+        font-size: 25px;
+    }
+
+    .piazza-content {
+        width: min(620px, calc(100% - 80px));
+        max-width: 620px;
+        margin: 60px auto;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .piazza-gallery {
+        margin: 0 auto 90px auto;
+        padding: 0 24px;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: 24px;
+        row-gap: 40px;
+    }
+
+    .gallery-card {
+        max-width: 240px;
+        width: 100%;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .gallery-card p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* LINEA */
+    .container-linea {
+        padding: 0 24px;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 13px;
+    }
+}
