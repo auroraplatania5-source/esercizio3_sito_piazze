@@ -83,6 +83,18 @@ nav a {
     border: 1.5px solid white;
 }
 
+.hero-image-voce-piazze {
+    width: 100%;
+    height: auto; 
+    overflow: hidden;
+}
+
+.hero-image-voce-piazze img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
 
 .titolo-sezione-piazze {
     color: white;
@@ -145,7 +157,7 @@ nav a {
 .label span {
     font-family: 'Epilogue', sans-serif;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     color: #000000;
     display: inline-block;
 }
@@ -221,7 +233,7 @@ nav a {
 
     font-family: 'Epilogue', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 .footer-links a {
@@ -238,7 +250,7 @@ nav a {
 .footer-copyright {
     font-family: 'Epilogue', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 20px;
     text-align: center;
     margin: 0;
 }
@@ -289,17 +301,31 @@ nav a {
 }
 
 .piazza-content {
-    max-width: 620px;
+    max-width: 750px;
     margin: 120px auto 120px auto;
     color: white;
     font-family: 'Epilogue', sans-serif;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.7;
 }
 
 .piazza-content p {
     margin-bottom: 22px;
+}
+
+.scopri-link {
+    margin-top: 20px;
+}
+
+.scopri-link a {
+    color: red;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 400;
+}
+
+.scopri-link a::after {
+    content: " →";
 }
 
 .piazza-gallery {
@@ -328,7 +354,7 @@ nav a {
     margin-top: 14px;
     font-family: 'Epilogue', sans-serif;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 20px;
 }
 
 
@@ -365,7 +391,7 @@ nav a {
     }
 
     .descrizione-sito-testo {
-        font-size: 10px;
+        font-size: 18px;
         line-height: 1.6;
     }
 
@@ -392,7 +418,7 @@ nav a {
 
     /* caption */
     .label span {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     /* no overlay e link */
@@ -411,7 +437,17 @@ nav a {
     /* FOOTER */
     .footer-links,
     .footer-copyright {
-        font-size: 8px;
+        font-size: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .footer-links span {
+        display: none;
     }
 }
 
@@ -482,7 +518,7 @@ nav a {
     /* FOOTER */
     .footer-links,
     .footer-copyright {
-        font-size: 13px;
+        font-size: 18px;
     }
 }
 
@@ -557,7 +593,7 @@ nav a {
     }
 
     .label span {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     /* no overlay, no link effect */
@@ -580,7 +616,17 @@ nav a {
 
     .footer-links,
     .footer-copyright {
-        font-size: 8px;
+        font-size: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .footer-links span {
+        display: none;
     }
 }
 
@@ -623,7 +669,7 @@ nav a {
     }
 
     .label span {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     /* no overlay, no link effect */
@@ -638,7 +684,7 @@ nav a {
     /* footer */
     .footer-links,
     .footer-copyright {
-        font-size: 13px;
+        font-size: 18px;
     }
 }
 
@@ -668,7 +714,7 @@ nav a {
         width: min(620px, calc(100% - 32px));
         max-width: 620px;
         margin: 40px auto;
-        font-size: 11px;
+        font-size: 15px;
         line-height: 1.75;
     }
 
@@ -694,7 +740,7 @@ nav a {
     }
 
     .gallery-card p {
-        font-size: 12px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -706,7 +752,7 @@ nav a {
     /* FOOTER */
     .footer-links,
     .footer-copyright {
-        font-size: 8px;
+        font-size: 15px;
     }
 }
 
@@ -715,7 +761,7 @@ nav a {
 
     /* NAVBAR */
     .section-header nav ul li a {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     /* HERO */
@@ -731,7 +777,7 @@ nav a {
         width: min(620px, calc(100% - 80px));
         max-width: 620px;
         margin: 60px auto;
-        font-size: 13px;
+        font-size: 18px;
         line-height: 1.7;
     }
 
@@ -758,7 +804,7 @@ nav a {
     }
 
     .gallery-card p {
-        font-size: 12px;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -770,6 +816,113 @@ nav a {
     /* FOOTER */
     .footer-links,
     .footer-copyright {
-        font-size: 13px;
+        font-size: 18px;
+    }
+
+}
+
+
+
+/* RESPONSIVE PAGINE HTML PIAZZE DETTAGLI */
+/* MOBILE */
+@media (max-width: 767px) {
+
+    /* NAVBAR */
+    .section-header nav ul li a {
+        font-size: 15px;
+    }
+
+    .title h1 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* HERO */
+    .piazza-hero {
+        position: relative;
+        height: 40vh;
+        overflow: hidden;
+    }
+
+    .piazza-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .piazza-hero-title h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    /* CONTENUTO */
+    .piazza-content {
+        width: calc(100% - 32px);
+        margin: 40px auto;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    /* LINK TORNA */
+    .torna-link a {
+        font-size: 15px;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* NAVBAR */
+    .section-header nav ul li a {
+        font-size: 18px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+
+    /* HERO */
+    .piazza-hero {
+        position: relative;
+        height: 55vh;
+        overflow: hidden;
+    }
+
+    .piazza-hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .piazza-hero-title h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* CONTENUTO */
+    .piazza-content {
+        width: calc(100% - 80px);
+        margin: 60px auto;
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    /* LINK TORNA */
+    .torna-link a {
+        font-size: 18px;
+    }
+
+    /* FOOTER */
+    .footer-links,
+    .footer-copyright {
+        font-size: 18px;
     }
 }
